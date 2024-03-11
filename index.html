@@ -166,7 +166,6 @@
         <p>jest / react test library / enzyme</p>
         <p>ci cd: jenkins / github actions / gitlab CI/CD</p>
     </div>
-    cos
     <div id="projects">
         <h2>Projects</h2>
         <div id="projects-container">
@@ -196,6 +195,24 @@
                     <a href="https://ola-fotografie.pl/" target="_blank">
                         <h2>Ola Fotografie.pl</h2>
                         <h3>Node / Express / MySQL / Svelte</h3>
+                    </a>
+                    <div class="project-info-open">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                             stroke="currentColor" class="w-6 h-6">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                  d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"/>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            <div class="project">
+                <div class="project-image">
+                    <img src="./assets/projects/2048game.png" alt="2048 Game"/>
+                </div>
+                <div class="project-info">
+                    <a href="https://aszlacheta.github.io/2048-game/" target="_blank">
+                        <h2>2048 Game</h2>
+                        <h3>React / Ramda / Sass / Axios / i18next </h3>
                     </a>
                     <div class="project-info-open">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
@@ -241,7 +258,7 @@
     // append end year in footer
     var copyrightsElement = document.querySelector('#copyrights');
     if (copyrightsElement) {
-        copyrightsElement.append((new Date().getFullYear()).toString());
+        copyrightsElement.append((` ${new Date().getFullYear()}`));
     }
 
     // add menu links
