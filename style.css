@@ -269,6 +269,10 @@ main {
     margin-right: 5vw;
 }
 
+#projects .project:nth-child(4n) {
+    margin-left: 5vw;
+}
+
 /* 2, 3 */
 #projects .project:nth-child(4n + 2),
 #projects .project:nth-child(4n + 3){
