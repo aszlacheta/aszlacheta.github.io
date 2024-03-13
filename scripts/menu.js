@@ -7,8 +7,9 @@
     function toggleMenuTextColorOnDarkAreas() {
         var darkAreaElements = document.querySelectorAll(DARK_AREA_ELEMENTS);
         var darkAreas = [];
+        var isMobile = document.querySelector('#toggle-menu').getBoundingClientRect().height > 0;
 
-        if (!document.body.classList.contains('show-menu')) {
+        if (!isMobile) {
             for (var i = 0; i < darkAreaElements.length; i++) {
                 var element = darkAreaElements[i];
 
@@ -61,4 +62,32 @@
             }, 250);
         }
     });
+})();
+
+(function addMenuClickBehaviour() {
+    var menuItems = document.querySelectorAll('nav ul li');
+    var onClick = function (event) {
+        var navigateTo = event.target.getAttribute('data-navigateto');
+        var isMobile = document.querySelector('#toggle-menu').getBoundingClientRect().height > 0;
+
+        if (navigateTo) {
+            var header = document.querySelector('header');
+            var headerHeight = header.getBoundingClientRect().height || 0;
+
+            var elementToNavigateTo = document.getElementById(navigateTo);
+            var elementToNavigateToTopScroll = elementToNavigateTo.getBoundingClientRect().top + window.scrollY;
+
+            if (isMobile) {
+                elementToNavigateToTopScroll -= headerHeight;
+            }
+
+            if (elementToNavigateTo) {
+                window.scrollTo({top: parseInt(elementToNavigateToTopScroll, 10), behavior: 'smooth'})
+            }
+        }
+    }
+
+    menuItems.forEach(menuItem => {
+        menuItem.addEventListener("click", onClick);
+    })
 })();

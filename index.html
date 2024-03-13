@@ -22,6 +22,7 @@
 
     <script defer src="./scripts/text-typing-animation.js"></script>
     <script defer src="./scripts/menu.js"></script>
+    <script defer src="./scripts/footer.js"></script>
 
     <title>Aleksandra Szlacheta - Senior Frontend Developer</title>
 </head>
@@ -195,29 +196,4 @@
     </div>
 </footer>
 </body>
-<script>
-    // append end year in footer
-    var copyrightsElement = document.querySelector('#copyrights');
-    if (copyrightsElement) {
-        copyrightsElement.append((` ${new Date().getFullYear()}`));
-    }
-
-    // add menu links
-    var menuItems = document.querySelectorAll('nav ul li');
-    var onClick = function (event) {
-        var navigateTo = event.target.getAttribute('data-navigateto');
-
-        if (navigateTo) {
-            var elmntToView = document.getElementById(navigateTo);
-
-            if (elmntToView) {
-                elmntToView.scrollIntoView({behavior: 'smooth', block: 'start'});
-            }
-        }
-    }
-
-    menuItems.forEach(menuItem => {
-        menuItem.addEventListener("click", onClick);
-    });
-</script>
 </html>
