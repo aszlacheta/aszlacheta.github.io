@@ -41,3 +41,6 @@ main {
     align-items: center;
 }
 
+.blackbg {
+    background-color: black;
+}
