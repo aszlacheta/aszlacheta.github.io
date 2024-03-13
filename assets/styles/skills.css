@@ -1,0 +1,35 @@
+#skills {
+    background-color: black;
+    padding: 60px;
+
+    color: white;
+}
+
+#skills h2 {
+    margin: 30px 0 100px;
+
+    font-size: 27px;
+    font-weight: 300;
+    letter-spacing: 10px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+#skills h4 {
+    margin: 0 0 30px;
+
+    font-size: 27px;
+    font-weight: 400;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+}
+
+#skills p {
+    display: inline;
+    margin-right: 5px;
+}
+
+#skills p:not(:last-child):after {
+    content: '•';
+    margin-left: 10px;
+}

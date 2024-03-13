@@ -1,0 +1,52 @@
+#about {}
+
+#about h4 {
+    margin: 0 0 30px;
+
+    font-size: 27px;
+    font-weight: 400;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+}
+
+#about #about-container {
+    display: flex;
+    justify-content: center;
+}
+
+#about p {
+    line-height: 1.2rem;
+    font-size: 15px;
+    font-weight: 300;
+}
+
+#about p:last-child {
+    margin: 0;
+}
+
+#about #about-photo-container {
+    margin-left: 3rem;
+}
+
+#about #about-photo {
+    width: 250px;
+    height: 250px;
+    background-color: orange;
+    border-radius: 125px;
+    overflow: hidden;
+}
+
+#about #about-photo img {
+    max-height: 100%;
+}
+
+#about #about-social {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+}
+
+#about #about-social a:not(:last-child) {
+    margin-right: 10px;
+}
