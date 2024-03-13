@@ -1,30 +1,65 @@
-
-
 #introduction {
+    position: relative;
+    overflow: hidden;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 
     width: 100vw;
-    height: 90vh;
+    height: 95vh;
     text-align: center;
 }
 
-#introduction h3, #introduction h2 {
+#introduction #introduction-description {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+}
+
+#introduction #introduction-description h3,
+#introduction #introduction-description h2 {
     font-weight: 500;
     text-transform: uppercase;
     letter-spacing: 3px;
     margin: 0;
 }
 
-#introduction h3 {
+#introduction #introduction-description h3 {
     font-size: 40px;
     font-weight: 400;
 }
 
-#introduction h2 {
+#introduction #introduction-description h2 {
     font-size: 60px;
     font-weight: 500;
     margin-top: 30px;
+}
+
+#background-photo {
+    position: absolute;
+}
+
+#background-photo img {
+    filter: grayscale(1);
+    opacity: 0.08;
+}
+
+#introduction #show-more-below-arrow {
+    position: relative;
+    display: flex;
+    width: 5vw;
+    top: 0;
+    opacity: 0.1;
+    margin-bottom: -5vh;
+    animation: showMoreBelowArrow 5s infinite;
+}
+
+@keyframes showMoreBelowArrow {
+    50% {
+        opacity: 0.3;
+        top: 10px;
+    }
 }
