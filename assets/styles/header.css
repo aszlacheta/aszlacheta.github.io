@@ -28,6 +28,10 @@ header nav.make-lighter { /* added in JS on dark areas */
     color: white;
 }
 
+header nav.show {
+    display: flex;
+}
+
 header nav ul {
 }
 
@@ -40,12 +44,63 @@ header nav ul li:last-child {
     margin-right: 0;
 }
 
-@media (width < 600px) {
-    header nav ul {
-        flex-wrap: wrap;
+button#toggle-menu {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    width: 30px;
+    height: 30px;
+    background: none;
+    border: 0;
+}
+
+button#toggle-menu img {
+    width: 30px;
+    height: 30px;
+}
+
+@media (width > 600px) {
+    header button#toggle-menu {
+        display: none;
+    }
+}
+
+@media (width <= 600px) {
+    body {
+        transition: margin-top 0.5s ease-in-out;
     }
 
-    header nav ul li {
-        margin-bottom: 2vh;
+    body.show-menu header {
+        box-shadow: 0 -2px 20px inset #dfdfdf;
+    }
+
+    body header {
+        max-height: 0;
+        background: white;
+        transition: box-shadow 0.5s ease-in-out, max-height 0.5s ease-in-out;
+    }
+
+    body.show-menu header {
+        max-height: 300px;
+    }
+
+    body header nav {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.5s ease-in-out;
+    }
+
+    body.show-menu header nav {
+        max-height: 300px;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        flex: 1;
+    }
+
+    header nav ul li,
+    header nav ul li:last-child {
+        margin: 1vh auto;
     }
 }

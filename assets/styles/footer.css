@@ -88,6 +88,7 @@ footer #copyrights {
 
     footer #copyrights {
         text-wrap: initial;
+        justify-content: center;
         margin: 2vh 0;
     }
 }

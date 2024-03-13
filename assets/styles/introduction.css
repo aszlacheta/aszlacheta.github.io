@@ -60,7 +60,7 @@
 @keyframes showMoreBelowArrow {
     50% {
         opacity: 0.3;
-        top: 10px;
+        top: 20px;
     }
 }
 
