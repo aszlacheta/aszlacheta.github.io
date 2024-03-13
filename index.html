@@ -19,10 +19,12 @@
     <link rel="stylesheet" href="./assets/styles/skills.css">
     <link rel="stylesheet" href="./assets/styles/projects.css">
     <link rel="stylesheet" href="./assets/styles/footer.css">
+    <link rel="stylesheet" href="./assets/styles/animation-reveal.css">
 
     <script defer src="./scripts/text-typing-animation.js"></script>
     <script defer src="./scripts/menu.js"></script>
     <script defer src="./scripts/footer.js"></script>
+    <script defer src="./scripts/animation-reveal.js"></script>
 
     <title>Aleksandra Szlacheta - Senior Frontend Developer</title>
 </head>
@@ -60,7 +62,7 @@
     <div id="about">
         <h4>About me</h4>
         <div id="about-container">
-            <div>
+            <div class="reveal fade-left">
                 <p>Aleksandra Szlacheta - M.E. in Computer Science from the Lodz University of Technology. A strong
                     advocate
                     of
@@ -78,7 +80,7 @@
                     IT.
                     Newbie lecturer at the University of Lodz, helping students with Team programming classes.</p>
             </div>
-            <div id="about-photo-container">
+            <div id="about-photo-container" class="reveal fade-right">
                 <div id="about-photo">
                     <img src="./assets/about/about.png" alt="Aleksandra Szlacheta about me photo"/>
                 </div>
@@ -98,9 +100,9 @@
         </div>
     </div>
     <div id="skills" class="blackbg">
-        <h2>🌈 I create awesome projects 🌈</h2>
-        <h4>Skills</h4>
-        <div id="skills-container">
+        <h2 class="reveal fade-bottom">🌈 I create awesome projects 🌈</h2>
+        <h4 class="reveal fade-left">Skills</h4>
+        <div id="skills-container" class="reveal fade-bottom">
             <div class="skill">
                 <span>javascript</span>
                 <div class="skill-level" data-skillLevel="100%"></div>
@@ -154,7 +156,7 @@
     <div id="projects">
         <h2>Projects</h2>
         <div id="projects-container">
-            <div class="project">
+            <div class="project reveal fade-left" >
                 <div class="project-image">
                     <img src="./assets/projects/decision-wheel-angular.png" alt="Decision wheel angular project"/>
                 </div>
@@ -168,7 +170,7 @@
                     </div>
                 </div>
             </div>
-            <div class="project">
+            <div class="project reveal fade-right">
                 <div class="project-image">
                     <img src="./assets/projects/ola-fotografie.png" alt="ola-fotografie.pl page"/>
                 </div>
@@ -182,7 +184,7 @@
                     </div>
                 </div>
             </div>
-            <div class="project">
+            <div class="project reveal fade-left">
                 <div class="project-image">
                     <img src="./assets/projects/2048game.png" alt="2048 Game"/>
                 </div>
@@ -196,7 +198,7 @@
                     </div>
                 </div>
             </div>
-            <div class="project">
+            <div class="project reveal fade-right">
                 <div class="project-image">
                     <img src="./assets/projects/simple-agenda-app.png" alt="Simple Agenda app"/>
                 </div>
@@ -214,10 +216,10 @@
     </div>
 </main>
 <footer>
-    <div id="logo-container">
+    <div id="logo-container" class="reveal fade-left">
         <img src="./assets/icons/ASlogo.svg" alt="Aleksandra Szlacheta logo"/>
     </div>
-    <div id="contact">
+    <div id="contact" class="reveal fade-right">
         <span>Hi, I'm Ola and you?</span>
         <span>Say <a href="https://ola-fotografie.pl/contact">hello</a> as well!</span>
     </div>
