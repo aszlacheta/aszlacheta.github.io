@@ -1,10 +1,11 @@
 #skills {
+    width: 100vw;
     padding: 60px;
     color: white;
 }
 
 #skills h2 {
-    margin: 30px 0 10vh;
+    margin: 3vh 0 7vh;
 
     font-size: 27px;
     font-weight: 300;
@@ -22,12 +23,115 @@
     text-transform: uppercase;
 }
 
-#skills p {
-    display: inline;
-    margin-right: 5px;
+#skills #skills-container {
+    display: flex;
+    flex-wrap: wrap;
 }
 
-#skills p:not(:last-child):after {
-    content: '•';
-    margin-left: 10px;
+#skills .skill {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: calc(50% - 4vw);
+    margin-top: 1rem;
+}
+
+#skills .skill:nth-child(2n + 1) {
+    margin-right: 8vw;
+}
+
+#skills .skill span {
+    flex: 1;
+    font-family: 'Work Sans', serif;
+    font-size: 0.9rem;
+    letter-spacing: 0.1rem;
+    color: lightgray;
+    margin-right: 1rem;
+}
+
+#skills .skill .skill-level {
+    position: relative;
+    display: flex;
+    width: 200px;
+    height: 7px;
+    background: #313131;
+    padding: 6px;
+    border-radius: 10px;
+    overflow: hidden;
+    stroke: hsl(0, 0%, 100%);
+}
+
+#skills .skill .skill-level:after {
+    content: '';
+    position: absolute;;
+    top: 6.5px;
+    margin: 0 2px;
+    height: inherit;
+    background: hsl(43, 100%, 93%);
+    box-shadow: 0 0 5px hsl(60, 100%, 60%);
+    border-radius: 10px;
+
+    animation: animateProgress 2s infinite;
+}
+
+#skills .skill[data-skillLevel]:after {
+    width: 10px;
+}
+
+#skills .skill-level[data-skillLevel = "100%"]:after {
+    width: calc(0.98 * 200px);
+    animation-duration: 1s;
+}
+
+#skills .skill-level[data-skillLevel = "95%"]:after {
+    width: calc(0.95 * 200px);
+}
+
+#skills .skill-level[data-skillLevel = "85%"]:after {
+    width: calc(0.85 * 200px);
+    animation-duration: 900ms;
+}
+
+#skills .skill-level[data-skillLevel = "75%"]:after {
+    width: calc(0.75 * 200px);
+}
+
+#skills .skill-level[data-skillLevel = "65%"]:after {
+    width: calc(0.65 * 200px);
+    animation-duration: 1200ms;
+}
+
+#skills .skill-level[data-skillLevel = "55%"]:after {
+    width: calc(0.55 * 200px);
+    animation-duration: 1400ms;
+}
+
+#skills .skill-level[data-skillLevel = "45%"]:after {
+    width: calc(0.45 * 200px);
+    animation-duration: 700ms;
+}
+
+#skills .skill-level[data-skillLevel = "35%"]:after {
+    width: calc(0.35 * 200px);
+}
+
+#skills .skill-level[data-skillLevel = "25%"]:after {
+    width: calc(0.25 * 200px);
+}
+
+@media screen and (width < 800px) {
+
+    #skills .skill {
+        width: 100%;
+    }
+
+    #skills .skill:nth-child(2n + 1) {
+        margin-right: 0;
+    }
+}
+
+@keyframes animateProgress {
+    50% {
+        padding-right: 3px;
+    }
 }
