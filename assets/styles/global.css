@@ -44,3 +44,13 @@ main {
 .blackbg {
     background-color: black;
 }
+
+@media (width <= 600px) {
+    header,
+    main #introduction,
+    main #about,
+    main #skills,
+    main #projects {
+        padding: 45px 40px;
+    }
+}

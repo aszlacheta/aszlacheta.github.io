@@ -3,7 +3,6 @@
     overflow: hidden;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
 
     width: 100vw;
@@ -14,8 +13,8 @@
 #introduction #introduction-description {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
+    transform: translateY(35%);
     flex-grow: 1;
 }
 
@@ -28,18 +27,19 @@
 }
 
 #introduction #introduction-description h3 {
-    font-size: 40px;
+    font-size: 2rem;
     font-weight: 400;
 }
 
 #introduction #introduction-description h2 {
-    font-size: 60px;
+    font-size: 4rem;
     font-weight: 500;
     margin-top: 30px;
 }
 
 #background-photo {
     position: absolute;
+    top: 0;
 }
 
 #background-photo img {
@@ -54,12 +54,46 @@
     top: 0;
     opacity: 0.1;
     margin-bottom: -5vh;
-    animation: showMoreBelowArrow 5s infinite;
+    animation: showMoreBelowArrow 4s infinite;
 }
 
 @keyframes showMoreBelowArrow {
     50% {
         opacity: 0.3;
         top: 10px;
+    }
+}
+
+
+@media (width < 1000px) {
+    #introduction #introduction-description {
+        transform: translateY(40%);
+    }
+
+    #introduction #introduction-description h3 {
+        font-size: 1.5rem;
+    }
+
+    #introduction #introduction-description h2 {
+        font-size: 2.5rem;
+    }
+}
+
+@media (width < 600px) {
+    #introduction #introduction-description {
+        transform: translateY(50%);
+    }
+
+    #introduction #introduction-description h3 {
+        font-size: 1rem;
+    }
+
+    #introduction #introduction-description h2 {
+        font-size: 1.5rem;
+    }
+
+    #introduction #show-more-below-arrow {
+        margin-bottom: -1vh;
+        width: 10vw;
     }
 }

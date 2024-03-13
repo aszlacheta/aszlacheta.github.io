@@ -33,9 +33,19 @@ header nav ul {
 
 header nav ul li {
     list-style-type: none;
-    margin-right: 30px;
+    margin-right: 3vw;
 }
 
 header nav ul li:last-child {
     margin-right: 0;
+}
+
+@media (width < 600px) {
+    header nav ul {
+        flex-wrap: wrap;
+    }
+
+    header nav ul li {
+        margin-bottom: 2vh;
+    }
 }
