@@ -1,0 +1,56 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+
+
+    font-family: "Work Sans", sans-serif;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: row;
+    padding: 0;
+}
+
+nav ul li {
+    list-style-type: none;
+    cursor: pointer;
+}
+
+header,
+main #introduction,
+main #about,
+main #skills,
+main #projects {
+    padding: 60px 120px;
+    box-sizing: border-box;
+}
+
+main {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.blackbg {
+    background-color: black;
+}
+
+@media (width <= 600px) {
+    header,
+    main #introduction,
+    main #about,
+    main #skills,
+    main #projects {
+        padding: 45px 40px;
+    }
+}
